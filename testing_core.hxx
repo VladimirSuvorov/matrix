@@ -106,3 +106,10 @@ bool is_homework_correct() {
 	}
 	return true;
 }
+
+
+int main(int argc, char *argv[])
+{
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
+}

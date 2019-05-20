@@ -100,7 +100,6 @@ bool is_homework_correct() {
 		void* a;
 		float v;
 		std::tie(x, y, z, a, v) = c;
-		cout.clear(0, true);
 		cout << "[" << x << "][" << y << "][" << z << "] = " << v;
 		std::getline(cout, printed);
 		assert(printed == "[100][nan][hundred] = 3.14");

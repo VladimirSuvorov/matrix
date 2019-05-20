@@ -51,9 +51,9 @@ namespace matrix_project::implementation {
 	private:
 		complex_index_t& addIndex(complex_index_t& complex_index) {
 			if constexpr (is_not_last) {
-				return previous_.addIndex(InfiniteMatrixTraits::add_index_to<CurrentArity>(index_, complex_index));
+				return previous_.addIndex(InfiniteMatrixTraits::template add_index_to<CurrentArity>(index_, complex_index));
 			}
-			else return InfiniteMatrixTraits::add_index_to<CurrentArity>(index_, complex_index);
+			else return InfiniteMatrixTraits::template add_index_to<CurrentArity>(index_, complex_index);
 		}
 
 		auto& getValue(const complex_index_t& complex_index) {
@@ -116,8 +116,8 @@ namespace matrix_project::implementation {
 
 		complex_index_t buildIndex(next_index_type next_index) {
 			complex_index_t complex_index;
-			InfiniteMatrixTraits::add_index_to<NextArity>(next_index, complex_index);
-			InfiniteMatrixTraits::add_index_to<CurrentArity>(index_, complex_index);
+			InfiniteMatrixTraits::template add_index_to<NextArity>(next_index, complex_index);
+			InfiniteMatrixTraits::template add_index_to<CurrentArity>(index_, complex_index);
 			if constexpr (is_not_last) {
 				return previous_.addIndex(complex_index);
 			}

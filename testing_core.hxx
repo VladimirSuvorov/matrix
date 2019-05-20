@@ -93,17 +93,18 @@ bool is_homework_correct() {
 	//
 	assert(m3x[100][numeric_limits<float>::signaling_NaN()]["hundred"][&m3x] == 3.14f);
 	assert(m3x.size() == 1);
-	/*for (auto c : m3x) {
+	for (auto c : m3x) {
 		size_t x;
 		float y;
 		string z;
 		void* a;
 		float v;
 		std::tie(x, y, z, a, v) = c;
+		cout.clear();
 		cout << "[" << x << "][" << y << "][" << z << "] = " << v;
 		std::getline(cout, printed);
 		assert(printed == "[100][nan][hundred] = 3.14");
-	}*/
+	}
 	return true;
 }
 

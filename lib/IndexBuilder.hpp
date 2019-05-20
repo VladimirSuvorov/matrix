@@ -66,7 +66,7 @@ namespace matrix_project::implementation {
 		previous_type& previous_;
 		current_index_type index_;
 	private:
-		friend class next_type;
+		friend next_type;
 	};
 
 

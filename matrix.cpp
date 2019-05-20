@@ -10,7 +10,7 @@
 
 
 struct FloatDV {
-	inline static float Value = 0.6653;
+	inline static constexpr float Value = 0.6653;
 
 	using value_type = float;
 	static constexpr value_type DefaultValue() {
@@ -43,15 +43,15 @@ int main(int argc, char* argv[]) {
 	using namespace std;
 
 	print_info("OTUS homework 6 example stuff:");
-	Matrix<int, -1> matrix; // бесконечная матрица int заполнена значениями -1
-	assert(matrix.size() == 0); // все ячейки свободны
+	Matrix<int, -1> matrix; // ГЎГҐГ±ГЄГ®Г­ГҐГ·Г­Г Гї Г¬Г ГІГ°ГЁГ¶Г  int Г§Г ГЇГ®Г«Г­ГҐГ­Г  Г§Г­Г Г·ГҐГ­ГЁГїГ¬ГЁ -1
+	assert(matrix.size() == 0); // ГўГ±ГҐ ГїГ·ГҐГ©ГЄГЁ Г±ГўГ®ГЎГ®Г¤Г­Г»
 	auto a = matrix[0][0];
 	assert(a == -1);
 	assert(matrix.size() == 0);
 	matrix[100][100] = 314;
 	assert(matrix[100][100] == 314);
 	assert(matrix.size() == 1);
-	// выведется одна строка
+	// ГўГ»ГўГҐГ¤ГҐГІГ±Гї Г®Г¤Г­Г  Г±ГІГ°Г®ГЄГ 
 	// 100100314
 	for (auto c : matrix)
 	{

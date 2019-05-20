@@ -1,5 +1,6 @@
 #include <sstream>
 #include <limits.h>
+#include <gtest/gtest.h>
 #include "lib/InfiniteMatrix.hpp"
 
 template<typename T, T value>

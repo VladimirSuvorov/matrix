@@ -62,7 +62,7 @@ target_link_libraries(homework_test
 )
 
 #Install
-install(TARGETS editor RUNTIME DESTINATION bin)
+install(TARGETS matrix RUNTIME DESTINATION bin)
 #CPack
 set (CPACK_GENERATOR DEB)
 set (CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")

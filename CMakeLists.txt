@@ -30,7 +30,7 @@ include_directories(
 #configure_file(version.h.in version.h)
 
 #Targets
-add_executable(matrix Application.cpp)
+add_executable(matrix matrix.cpp)
 add_executable(homework_test integration_test.cpp)
 
 

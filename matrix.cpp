@@ -10,7 +10,7 @@
 
 
 struct FloatDV {
-	inline static constexpr float Value = 0.6653;
+	static constexpr float Value = 0.6653;
 
 	using value_type = float;
 	static constexpr value_type DefaultValue() {

@@ -32,7 +32,7 @@ deploy:
     skip_cleanup: true
     #debug: on
     script: 
-    - curl -T editor-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uvladimirsuvorov:$BINTRAY_API_KEY "https://api.bintray.com/content/vladimirsuvorov/otus-cpp/editor/$TRAVIS_BUILD_NUMBER/editor-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
+    - curl -T matrix-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uvladimirsuvorov:$BINTRAY_API_KEY "https://api.bintray.com/content/vladimirsuvorov/otus-cpp/matrix/$TRAVIS_BUILD_NUMBER/matrix-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
   - provider: pages
     local-dir: html
     skip_cleanup: true

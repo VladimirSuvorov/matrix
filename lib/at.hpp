@@ -23,8 +23,9 @@ namespace matrix_project::utility {
 		//therefore you should avoid to use it directly.
 		template<size_t index, typename...Ts>
 		struct At {
-			using previous_t = typename typename At<(index - 1), Ts...>::previous_t::pop_next;
-			using result_t =  previous_t::typename result_t;
+			using previous = typename At<(index - 1), Ts...>::previous_t;//temp for g++ only
+			using previous_t = typename previous::pop_next;
+			using result_t = typename previous_t::result_t;
 		};
 		//Check_At Provides a different specializations for a given index and typesequence,
 		//depending on if a given index less than count of a given types: T0 ... T[N-1],
